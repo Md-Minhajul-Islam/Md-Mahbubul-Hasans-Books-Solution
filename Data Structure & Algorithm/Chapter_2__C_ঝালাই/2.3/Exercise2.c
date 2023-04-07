@@ -7,7 +7,7 @@ int main()
     int n;
     scanf("%d", &n);
 
-    double sum = n * (n+1) * ((n+2)/6);
+    double sum = n * (n+1) * ((n+2)/6); //formula extracted from the given formula
     printf("%lf", sum);
 
     return 0;
