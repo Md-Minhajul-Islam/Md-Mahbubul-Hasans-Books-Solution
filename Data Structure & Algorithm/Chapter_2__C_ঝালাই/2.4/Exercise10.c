@@ -1,4 +1,5 @@
 // Q: তোমাকে n দেওয়া আছে বলতে হবে এটি মৌলিক কি মৌলিক নয়
+//this code looks big but it's very efficient
 #include<stdio.h> 
 int main()
 {
