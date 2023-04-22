@@ -1,5 +1,6 @@
 // Q: https://lightoj.com/problem/lift
 #include<stdio.h>
+#include<math.h>
 int main()
 {
     int t;
@@ -8,11 +9,9 @@ int main()
     {
         int me, lift;
         scanf("%d %d", &me, &lift);
-        if(lift >= me)
-            printf("Case %d: %d\n", i, (lift*4+19)); // 19 == (3times door open & close +
-        else                                         // 2times enter & exit)
-            printf("Case %d: %d\n", i, (me*8-lift*4+19)); //(me-lift)*4+(4*me)+19);
-    }
+            printf("Case %d: %d\n", i, 4*(me+(int)fabs(me-lift))+19); // 19 == (3times door open/close +
+    }                                                            // 2times enter/exit)
     return 0;
 }
+
 
