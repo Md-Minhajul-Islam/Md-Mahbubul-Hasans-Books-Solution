@@ -25,74 +25,65 @@ int main()
     printf("\n");
 
     //3
+    int l = 1, s = n-1;
     for(int i=1; i<=n; i++)
     {
-        for(int j=1; j<=n-i; j++)
+        for(int j=1; j<=s; j++)
             printf(" ");
-        for(int k=1; k<=i; k++)
-            printf("*");
-        for(int l=1; l<i; l++)
+        for(int k=1; k<=l; k++)
             printf("*");
         printf("\n");
+        l += 2, s--;
     }
     printf("\n");
 
     //4
-    for(int i=n; i>0; i--)
+    l = 0, s = 0;
+    for(int i=1; i<=n; i++)
     {
-        for(int j=1; j<=n-i; j++)
+        for(int j=1; j<=s; j++)
             printf(" ");
-        for(int k=1; k<=i; k++)
+        for(int k=1; k<n-l; k++)
             printf("%d", k);
-        for(int l=i-1; l>0; l--)
-            printf("%d", l);
-        printf("\n");        
+        for(int m=n-l; m>=1; m--)
+            printf("%d", m);
+        printf("\n");
+
+        l++, s++;
     }
     printf("\n");
 
     //5
-    for(int i = 1; i<=n; i++)
+    l = 1, s = n-1;
+    for(int i = 1; i<=2*n-1; i++)
     {
-        for(int j = 1; j <= n-i; j++)
+        for(int j = 1; j <= s; j++)
             printf(" ");
-        for(int k = 1; k <= i; k++)
-            printf("*");
-        for(int l = 1; l < i; l++)
+        for(int k = 1; k <= l; k++)
             printf("*");
         printf("\n");
-    }
-    for(int i=n-1; i>0; i--)
-    {
-        for(int j=1; j<=n-i; j++)
-            printf(" ");
-        for(int k=1; k<=i; k++)
-            printf("*");
-        for(int l=i-1; l>0; l--)
-            printf("*");
-        printf("\n");
+        if(i < n)
+            l += 2, s--;
+        else
+            l -= 2, s++;
     }
     printf("\n");
 
     //6
-    for(int i=1; i<=n; i++)
+    l = n-1, s = n-1;
+    for(int i=1; i<=2*n-1; i++)
     {
-        for(int j=1; j<=n-i; j++)
+        for(int j=1; j<=s; j++)
             printf(" ");
-        for(int k=1; k<=i; k++)
+        for(int k=1; k<n-l; k++)
             printf("%d", k);
-        for(int l=i-1; l>0; l--)
-            printf("%d", l);
+        for(int m=n-l; m>=1; m--)
+            printf("%d", m);
         printf("\n");
-    }
-    for(int i=n-1; i>0; i--)
-    {
-        for(int j=1; j<=n-i; j++)
-            printf(" ");
-        for(int k=1; k<=i; k++)
-            printf("%d", k);
-        for(int l=i-1; l>0; l--)
-            printf("%d", l);
-        printf("\n");
+        if(i < n)
+            l--, s--;
+        else
+            l++, s++;
     }
     printf("\n");
 
