@@ -28,6 +28,7 @@ int main()
         else if(i == len2-1 && len1 != len2)
         {
             printf("Second Stirng Is Lexicographically Smaller\n");
+            break;
         }
         else if(i == len1-1 && i == len2-1)
         {
