@@ -1,4 +1,5 @@
 // Q: https://acm.timus.ru/problem.aspx?space=1&num=1025
+// choose Language : GCC 9.2 x64
 #include<stdio.h>
 int main()
 {
