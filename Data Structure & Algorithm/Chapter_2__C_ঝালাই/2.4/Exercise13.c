@@ -1,24 +1,22 @@
-// Q:
+// Q: x ও n দেওয়া আছে, তোমাকে cosx এর মান maclaurine series এর সাহায্যে বের করতে হবে। 
+// cosx এর ধারাটি হচ্ছে 1 - (x^2)/2! + (x^4)/4! - (x^6)/6! + (x^8)/8! - ... nth term
 #include<stdio.h>
-#include<math.h> 
 int main()
 {
     int n; double x;
-    scanf("%d %lf", &n, &x);    //input x in degree
+    scanf("%lf %d", &x, &n);    //input x in degree
     x = x*3.1416/180;           //converted degree into radian
 
-    double sum = 0.0, sign = 1.0;
-    for(int i = 0; i < n; i++)
+    double sum = 1.0, term = 1.0;
+    for(int i = 1; i <= n; i++)
     {
-        double fact = 1.0;
-        for (int j = 2*i; j > 0; j--)
-            fact *= j;
-        sum += sign * (pow(x,2.0*i)/fact);
-        sign *= -1.0;
+        term *= -1*x*x / ((2*i)*(2*i-1));
+        sum += term;
     }
-    printf("%lf",sum);
+    printf("%.3lf",sum);
     return 0;
 }
 
-// accuracy rate < 100%
+// Note: The higher value of n gives more accurate output
+
 
