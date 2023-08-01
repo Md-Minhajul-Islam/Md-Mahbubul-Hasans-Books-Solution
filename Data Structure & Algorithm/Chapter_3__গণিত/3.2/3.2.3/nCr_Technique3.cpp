@@ -4,6 +4,7 @@
 2. take values in r_Arr from min(r, n-r) to 1   // cause, the same values from up and down always cut each other
 3. multiply smallest number of nArr with ans
 4. divide ans by smallest number of rArr
+5. repeat 3 & 4 for each element of rArr
 */
 #include <bits/stdc++.h>
 using namespace std;
