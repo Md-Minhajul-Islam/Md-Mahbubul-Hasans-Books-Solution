@@ -1,4 +1,5 @@
 // Q: Find the Derangement Number 
+// Formula D = (n-1)* {D(n-2) + D(n-1)}
 #include<bits/stdc++.h>
 using namespace std;
 long long deRangement(int n)
@@ -8,7 +9,7 @@ long long deRangement(int n)
     long long a = 0, b = 1;
     for(int i = 3; i <= n; i++)
     {
-        long long curr = ((i - 1) * (a + b)) % 1000000007;
+        long long curr = (i - 1) * (a + b);
         a = b;
         b = curr;
     }
