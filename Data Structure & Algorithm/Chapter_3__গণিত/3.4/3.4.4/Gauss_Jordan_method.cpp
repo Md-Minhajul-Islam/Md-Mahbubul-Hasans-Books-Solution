@@ -8,28 +8,22 @@ void gauss_jordan(int n)
     {
         int pivot = i;
         for(int j = i+1; j < n; j++)
-        {
             if (fabs(mat[j][i]) > fabs(mat[pivot][i]))
-                pivot = j;
-        }    
+                pivot = j; 
         if(fabs(mat[pivot][i]) == 0) continue;
         if(pivot != i)
-        {
             for (int j = i; j <= n; j++)
                 swap(mat[pivot][j], mat[i][j]);
-        }
         double x = mat[i][i];
         for(int j = 0; j <= n; j++)
             mat[i][j] /= x;
         for(int j = 0; j < n; j++)
-        {
             if (j != i)
             {
                 double factor = mat[j][i] / mat[i][i];
                 for (int k = i; k <= n; k++)
                     mat[j][k] -= factor * mat[i][k];
             }
-        }    
     }
 }
 int main()
