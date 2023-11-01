@@ -13,7 +13,7 @@ void sieve(long long n)
         if(isPrime[i])
         {
             prime.push_back(i);
-            for(long long j = i*i; j <= n; j++)
+            for(long long j = i*i; j <= n; j+=i)
                 isPrime[j] = false;
         }
     }
